@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Salut Dev — Développeur web</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Canvas des pétales de sakura (animé par script.js) -->
+    <canvas id="petales" aria-hidden="true"></canvas>
+
+    <!-- ===== SIDEBAR GAUCHE ===== -->
+    <aside class="sidebar">
+      <a href="#accueil" class="logo">侍</a>
+      <p class="role">Web Developer</p>
+      <nav class="side-nav">
+        <a href="#accueil" class="active">Accueil</a>
+        <a href="#apropos">À propos</a>
+        <a href="#competences">Compétences</a>
+        <a href="#projets">Projets</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="socials">
+        <a href="#" aria-label="GitHub">GH</a>
+        <a href="#" aria-label="LinkedIn">in</a>
+        <a href="#" aria-label="Twitter">X</a>
+        <a href="#" aria-label="Facebook">F</a>
+      </div>
+      <p class="copy">© 2026 Jhunino</p>
+    </aside>
+
+    <button class="burger" aria-label="Menu">☰</button>
+
+    <!-- ===== MENU HAUT ===== -->
+    <header class="topnav">
+      <a href="#" class="btn btn-ghost small">Télécharger CV ↓</a>
+    </header>
+
+    <main>
+      <!-- ===== ACCUEIL ===== -->
+      <section id="accueil" class="hero">
+        <div class="scene" aria-hidden="true">
+          <div class="soleil"></div>
+          <svg viewBox="0 0 1200 500" preserveAspectRatio="xMidYMax slice">
+            <defs>
+              <linearGradient id="mont" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#3a3f5c" />
+                <stop offset="1" stop-color="#0b0d18" />
+              </linearGradient>
+              <linearGradient id="eau" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#1a1d33" />
+                <stop offset="1" stop-color="#07080f" />
+              </linearGradient>
+            </defs>
+            <polygon
+              points="250,400 520,150 600,110 680,150 980,400"
+              fill="url(#mont)"
+            />
+            <polygon
+              points="520,150 600,110 680,150 640,170 600,145 560,175"
+              fill="#e9ecf5"
+              opacity=".9"
+            />
+            <rect y="400" width="1200" height="100" fill="url(#eau)" />
+            <!-- torii -->
+            <g fill="#c73a4f">
+              <rect x="880" y="330" width="10" height="80" />
+              <rect x="960" y="330" width="10" height="80" />
+              <rect x="865" y="318" width="120" height="12" rx="3" />
+              <rect x="875" y="340" width="100" height="7" />
+            </g>
+          </svg>
+          <div class="branche"></div>
+        </div>
+
+        <div class="hero-txt">
+          <p class="jp" id="japan">こんにちは、</p>
+          <h1>
+            Je crée des expériences<br />web <em>élégantes</em> et efficaces.
+          </h1>
+          <span class="trait"></span>
+          <div class="texte">
+
+            <p class="lead">
+              Développeur web passionné par le code propre, le design minimaliste
+              et les interfaces qui laissent une impression durable.
+            </p>
+            <!-- Effet machine à écrire (textes modifiables dans script.js) -->
+            <p class="typing" id="type">
+              Je suis <b id="typing"></b><i class="curseur"></i>
+            </p>
+          </div>
+          <a href="#projets" class="btn btn-red">Découvrir mon travail →</a>
+        </div>
+        <a href="#apropos" class="scroll">Scroller<span></span></a>
+      </section>
+
+      <!-- ===== À PROPOS ===== -->
+      <section id="apropos" class="fenetre">
+        <!-- 知 = connaissance -->
+        <span class="kanji" aria-hidden="true">知</span>
+        <div class="cadre grille-2">
+          <div class="photo reveal">
+          
+            <img alt="Ma photo" src="img/moi.jpg" />
+          </div>
+          <div class="reveal">
+            <h2 class="titre">À propos</h2>
+            <p id="nom">RAKOTONDRABE Dera Haja Jhunino</p>
+            <p>
+              Je suis développeur web basé à Madagascar. J'aime transformer des
+              idées en produits numériques rapides, accessibles et centrés sur
+              l'utilisateur.
+            </p>
+            <p>
+              Autodidacte, j'apprends en construisant : chaque projet personnel
+              est une occasion de peaufiner mes bases et d'explorer de nouvelles
+              technologies.
+            </p>
+            <div class="stats">
+              <div><b data-cible="3">0</b><span>Projets</span></div>
+              <div><b data-cible="0">0</b><span>Années d'expérience</span></div>
+              <div><b data-cible="100">0</b><span>% motivation</span></div>
+            </div>
+            <a href="#contact" class="btn btn-ghost">En savoir plus →</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== COMPÉTENCES ===== -->
+      <section id="competences" class="fenetre alt">
+        <span class="kanji" aria-hidden="true">学</span>
+        <div class="cadre">
+          <h2 class="titre reveal">Compétences</h2>
+          <div class="skills">
+            <!-- data-niveau = pourcentage de la barre -->
+            <div class="skill reveal">
+              <span>HTML</span>
+              <div class="barre"><i data-niveau="95"></i></div>
+              <em>95%</em>
+            </div>
+            <div class="skill reveal">
+              <span>CSS / SCSS</span>
+              <div class="barre"><i data-niveau="90"></i></div>
+              <em>90%</em>
+            </div>
+            <div class="skill reveal">
+              <span>JavaScript</span>
+              <div class="barre"><i data-niveau="85"></i></div>
+              <em>85%</em>
+            </div>
+            <div class="skill reveal">
+              <span>React</span>
+              <div class="barre"><i data-niveau="80"></i></div>
+              <em>80%</em>
+            </div>
+            <div class="skill reveal">
+              <span>Node.js</span>
+              <div class="barre"><i data-niveau="75"></i></div>
+              <em>75%</em>
+            </div>
+            <div class="skill reveal">
+              <span>Figma</span>
+              <div class="barre"><i data-niveau="70"></i></div>
+              <em>70%</em>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PROJETS ===== -->
+      <section id="projets" class="fenetre">
+        <span class="kanji" aria-hidden="true">進</span>
+        <div class="cadre">
+          <h2 class="titre reveal">Projets</h2>
+          <div class="filtres reveal">
+            <button class="on" data-f="tous">Tous</button>
+            <button data-f="vitrine">Sites vitrines</button>
+            <button data-f="app">Applications</button>
+          </div>
+          <div class="cartes">
+           
+            <article class="carte reveal" data-cat="vitrine">
+              <div class="vignette v1"><span class="badge">Featured</span></div>
+              <div class="corps">
+                <h3>Tic Tac Toe</h3>
+                <p>Mini jeux </p>
+                <div class="tags">
+                  <span>HTML</span><span>CSS</span><span>JS</span>
+                </div>
+                <a href="#" class="lien">Voir le projet →</a>
+              </div>
+            </article>
+            <article class="carte reveal" data-cat="app">
+              <div class="vignette v2"></div>
+              <div class="corps">
+                <h3>NOVARIS AI</h3>
+                <p>Application web autour de l'intelligence artificielle.</p>
+                <div class="tags"><span>React</span><span>Node.js</span></div>
+                <a href="#" class="lien">Voir le projet →</a>
+              </div>
+            </article>
+            <article class="carte reveal" data-cat="vitrine">
+              <div class="vignette v3"></div>
+              <div class="corps">
+                <h3>TikTok</h3>
+                <p>Site clone</p>
+                <div class="tags">
+                  <span>HTML</span><span>CSS</span><span>JS</span>
+                </div>
+                <a href="#" class="lien">Voir le projet →</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CONTACT ===== -->
+      <section id="contact" class="fenetre alt">
+        <span class="kanji" aria-hidden="true">成</span>
+        <div class="cadre grille-2">
+          <div class="reveal">
+            <h2 class="titre">Contact</h2>
+            <p>
+              Une idée, un projet ou juste envie de discuter ? N'hésite pas à me
+              contacter.
+            </p>
+            <ul class="infos">
+              <li>✉ jhunino.rakotondrabe@gmail.com</li>
+              <li>⌖ Antananarivo, Madagascar</li>
+              <li>➤ Disponible pour freelance</li>
+            </ul>
+          </div>
+          <form id="form" class="reveal" novalidate>
+            <input name="nom" placeholder="Ton nom" required />
+            <input name="email" type="email" placeholder="Ton email" required />
+            <textarea
+              name="message"
+              rows="4"
+              placeholder="Ton message"
+              required
+            ></textarea>
+            <p id="retour" role="status"></p>
+            <button class="btn btn-red" type="submit">Me contacter →</button>
+          </form>
+        </div>
+        <p class="proverbe">
+          七転び八起き — Tomber sept fois, se relever huit fois.
+        </p>
+      </section>
+    </main>
+
+    <button class="haut" aria-label="Retour en haut">↑</button>
+    <script src="script.js"></script>
+  </body>
+</html>
